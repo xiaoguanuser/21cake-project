@@ -1,0 +1,1 @@
+"use strict";require(["config"],function(){require(["jquery","header","footer"],function(t,n,e){new Promise(function(e,o){t("header").load("/html/component/header.html",function(){n.init(),n.list(),n.welcome(),e()}),t("footer").load("/html/component/footer.html",function(){})})})});

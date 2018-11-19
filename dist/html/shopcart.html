@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>21Cake蛋糕官网</title>
+	<link rel="shortcut icon" href="/images/home/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/css/shopcart.css">
+</head>
+<body>
+	<header></header>
+	<div class="content">
+		<div class="content-box">
+			<div class="cart-empty">
+				<img src="/images/cart/cartempty.png">
+				<h5>您的购物车还没有商品</h5>
+				<h6><a href="detail.html">去购物>></a></h6>
+			</div>
+			<div class="cart-not-empty"></div>
+				<table class="cart-table">
+					<thead>
+						<tr>
+							<th><label><input type="checkbox" name="" class="ck_all">全选</label></th>
+							<th>序号</th>
+							<th>商品</th>
+							<th>生日牌</th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>金额</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody class="cart_body">
+						
+					</tbody>
+					<!-- <tfoot>
+						<tr>
+							<td>合计</td>
+							<td></td>
+						</tr>
+					</tfoot> -->
+				</table>
+				<!-- <a href="javascript:;">去结算</a> -->
+		</div>
+	</div>
+	<footer></footer>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/shopcart.js"></script>
+	<script type="text/html">
+		{{ each products products}}
+		<tr>
+			<td><input type="checkbox" name="" class="ch_pro"></td>
+			<td class="id">{{products.id}}</td>
+			<td><img src="{{products.img}}" alt="" class="img"></td>
+			<td class="title">{{products.title}}</td>
+			<td class="price">{{products.price}}</td>
+			<td><span class="decrement">-</span><input type="text" class="amount" value="{{products.amount}}"><span class="increment">+</span></td>
+			<td class="sub">{{products.price*products.amount}}</td>
+			<td><a href="javascript:;" class="del">删除</a></td>
+		</tr>
+		{{each}}
+	</script>
+</body>
+</html>
